@@ -9,16 +9,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
 <style>
-/* Mesma identidade da página de aprovação de vídeos. Marca: azul #2D3245, dourado #A97F4E, off-white #FAF9F5 */
+/* Mesma identidade da página de aprovação de vídeos. Paleta: marrom #4A3426, dourado #C08F54, off-white #FAF9F5 */
 :root{
---ink:#141827;
---navy:#2D3245;
---navy-2:#1B2031;
---gold:#A97F4E;
---gold-hi:#D8B988;
+--ink:#1F1611;
+--navy:#4A3426;
+--navy-2:#2B1E16;
+--gold:#C08F54;
+--gold-hi:#EBCB96;
 --paper:#FAF9F5;
 --muted:rgba(250,249,245,.64);
---line:rgba(169,127,78,.28);
+--line:rgba(192,143,84,.28);
 --ok:#8FBF9A;
 --warn:#E3A66B;
 --mark:url(logo-mark.png);
@@ -37,8 +37,8 @@ margin:0;padding-block:0;overflow-x:hidden;-webkit-font-smoothing:antialiased;
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--ink)}
 #fx{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
 .glow{position:fixed;inset:0;z-index:0;pointer-events:none;
-background:radial-gradient(520px 520px at var(--mx,70%) var(--my,18%),rgba(169,127,78,.16),transparent 70%),
-radial-gradient(900px 600px at 10% 0%,rgba(45,50,69,.9),transparent 70%)}
+background:radial-gradient(520px 520px at var(--mx,70%) var(--my,18%),rgba(192,143,84,.16),transparent 70%),
+radial-gradient(900px 600px at 10% 0%,rgba(74,52,38,.9),transparent 70%)}
 .grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.07;mix-blend-mode:overlay;
 background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
 main,header.top,footer{position:relative;z-index:2}
@@ -50,8 +50,8 @@ button{font:inherit;color:inherit}
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;
 margin-inline:calc(-1*max(16px,env(safe-area-inset-left,0px)));
 padding-inline:max(16px,env(safe-area-inset-left,0px));
-background:linear-gradient(var(--ink),rgba(20,24,39,.82));backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-border-bottom:1px solid rgba(169,127,78,.16)}
+background:linear-gradient(var(--ink),rgba(31,22,17,.82));backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(192,143,84,.16)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
 .brand{display:flex;align-items:center;gap:12px;min-width:0}
 .brand .m{width:20px;aspect-ratio:323/520;flex:none}
@@ -59,7 +59,7 @@ border-bottom:1px solid rgba(169,127,78,.16)}
 .count{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
 .count b{color:var(--gold-hi);font-weight:700}
 .bar{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:transparent}
-.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-hi));transition:width .8s cubic-bezier(.2,.8,.2,1);box-shadow:0 0 12px rgba(216,185,136,.7)}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-hi));transition:width .8s cubic-bezier(.2,.8,.2,1);box-shadow:0 0 12px rgba(235,203,150,.7)}
 .gm{background:linear-gradient(115deg,#8d6838 0%,#c9a46f 35%,#f0d9b0 50%,#c9a46f 65%,#8d6838 100%);background-size:250% 100%;
 -webkit-mask-image:var(--img);mask-image:var(--img);-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
 animation:shine 6s ease-in-out infinite}
@@ -89,7 +89,7 @@ h1 em{font-style:italic;font-weight:400;color:var(--gold-hi)}
 @keyframes spin{to{transform:rotate(360deg)}}
 .dial .mark{position:absolute;left:50%;top:50%;width:34%;aspect-ratio:323/520;translate:-50% -50%;animation:float 7s ease-in-out infinite}
 @keyframes float{50%{transform:translateY(-8px)}}
-.dial::after{content:"";position:absolute;inset:18%;border-radius:50%;background:radial-gradient(circle,rgba(169,127,78,.22),transparent 65%);filter:blur(10px);z-index:-1}
+.dial::after{content:"";position:absolute;inset:18%;border-radius:50%;background:radial-gradient(circle,rgba(192,143,84,.22),transparent 65%);filter:blur(10px);z-index:-1}
 
 /* ---------- seção ---------- */
 .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;padding-block:28px 22px;border-bottom:1px solid var(--line);margin-bottom:34px;flex-wrap:wrap}
@@ -100,13 +100,13 @@ h1 em{font-style:italic;font-weight:400;color:var(--gold-hi)}
 .rv.in{transform:none}
 
 /* ---------- cartão de revisão ---------- */
-.card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(45,50,69,.62),rgba(27,32,49,.72));border-radius:6px;padding:clamp(18px,3.4vw,40px);position:relative;overflow:hidden;margin-bottom:34px}
+.card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(74,52,38,.62),rgba(43,30,22,.72));border-radius:6px;padding:clamp(18px,3.4vw,40px);position:relative;overflow:hidden;margin-bottom:34px}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold-hi),transparent);opacity:.7}
 .tag{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-hi);font-variant-numeric:tabular-nums}
-.tag i{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(169,127,78,.7);animation:pulse 2.4s infinite}
+.tag i{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(192,143,84,.7);animation:pulse 2.4s infinite}
 .card[data-status="aprovado"] .tag i{background:var(--ok);animation:none;box-shadow:0 0 10px var(--ok)}
 .card[data-status="alteracao"] .tag i{background:var(--warn);animation:none;box-shadow:0 0 10px var(--warn)}
-@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(169,127,78,0)}100%{box-shadow:0 0 0 0 rgba(169,127,78,0)}}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(192,143,84,0)}100%{box-shadow:0 0 0 0 rgba(192,143,84,0)}}
 .meta h3{font-family:var(--f-display);font-weight:500;font-size:clamp(28px,3.4vw,44px);line-height:1.1;margin:14px 0 10px;text-wrap:balance}
 .who{color:var(--muted);margin:0 0 22px}
 .who b{color:var(--paper);font-weight:600}
@@ -121,10 +121,10 @@ h1 em{font-style:italic;font-weight:400;color:var(--gold-hi)}
 
 /* player de áudio */
 .aud{display:grid;grid-template-columns:auto minmax(0,1fr);gap:20px;align-items:center;margin-top:30px;padding:20px 24px;border:1px solid var(--line);border-radius:6px;
-background:linear-gradient(120deg,rgba(45,50,69,.7),rgba(20,24,39,.6));box-shadow:0 0 60px -20px rgba(169,127,78,.35)}
-.pb{position:relative;width:68px;height:68px;border-radius:50%;border:1px solid var(--gold-hi);background:rgba(20,24,39,.55);display:grid;place-items:center;cursor:pointer;flex:none;transition:background .25s}
-.pb:hover{background:rgba(169,127,78,.25)}
-.pb::after{content:"";position:absolute;inset:-9px;border-radius:50%;border:1px solid rgba(216,185,136,.5);animation:ring 2.6s ease-out infinite}
+background:linear-gradient(120deg,rgba(74,52,38,.7),rgba(31,22,17,.6));box-shadow:0 0 60px -20px rgba(192,143,84,.35)}
+.pb{position:relative;width:68px;height:68px;border-radius:50%;border:1px solid var(--gold-hi);background:rgba(31,22,17,.55);display:grid;place-items:center;cursor:pointer;flex:none;transition:background .25s}
+.pb:hover{background:rgba(192,143,84,.25)}
+.pb::after{content:"";position:absolute;inset:-9px;border-radius:50%;border:1px solid rgba(235,203,150,.5);animation:ring 2.6s ease-out infinite}
 .aud.playing .pb::after{animation:none;opacity:0}
 @keyframes ring{from{transform:scale(.85);opacity:.9}to{transform:scale(1.3);opacity:0}}
 .aud-b{min-width:0}
@@ -140,13 +140,13 @@ background:linear-gradient(120deg,rgba(45,50,69,.7),rgba(20,24,39,.6));box-shado
 .track{position:relative;flex:1;height:26px;display:flex;align-items:center;cursor:pointer;touch-action:none}
 .track::before{content:"";position:absolute;left:0;right:0;height:3px;border-radius:3px;background:rgba(250,249,245,.28)}
 .track .f{position:absolute;left:0;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--gold),var(--gold-hi));width:0}
-.track .k{position:absolute;left:0;width:13px;height:13px;border-radius:50%;background:var(--gold-hi);translate:-6px 0;box-shadow:0 0 10px rgba(216,185,136,.9)}
+.track .k{position:absolute;left:0;width:13px;height:13px;border-radius:50%;background:var(--gold-hi);translate:-6px 0;box-shadow:0 0 10px rgba(235,203,150,.9)}
 .time{font-size:12px;font-variant-numeric:tabular-nums;color:var(--paper);min-width:76px;text-align:right}
 .spd{border:1px solid var(--line);background:transparent;border-radius:999px;padding:3px 10px;font-size:12px;letter-spacing:.08em;cursor:pointer;color:var(--gold-hi);font-variant-numeric:tabular-nums;transition:background .25s,color .25s}
 .spd:hover{background:var(--gold);color:var(--ink)}
 
 /* roteiro */
-.cap{margin-top:22px;border:1px solid var(--line);border-radius:6px;background:rgba(20,24,39,.55)}
+.cap{margin-top:22px;border:1px solid var(--line);border-radius:6px;background:rgba(31,22,17,.55)}
 .cap-h{display:flex;align-items:center;gap:14px;padding:16px 20px;border-bottom:1px solid var(--line);flex-wrap:wrap}
 .av{width:40px;height:40px;border-radius:50%;background:var(--navy);border:1px solid var(--gold);display:grid;place-items:center;flex:none}
 .av .gm{width:12px;aspect-ratio:323/520;animation:none;background:var(--gold-hi)}
@@ -155,18 +155,18 @@ background:linear-gradient(120deg,rgba(45,50,69,.7),rgba(20,24,39,.6));box-shado
 .cap-h .sp{flex:1}
 .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
 .legend span{display:inline-flex;align-items:center;gap:8px}
-.legend .l1{display:inline-block;width:14px;height:10px;border-left:3px solid var(--gold);background:rgba(169,127,78,.3)}
+.legend .l1{display:inline-block;width:14px;height:10px;border-left:3px solid var(--gold);background:rgba(192,143,84,.3)}
 .legend .l2{font-style:italic;opacity:.6}
 .cap-b{padding:24px clamp(16px,3vw,28px) 28px}
-.fala{margin:0 0 14px;padding:14px 18px;border-left:3px solid var(--gold);background:linear-gradient(90deg,rgba(169,127,78,.18),rgba(169,127,78,.04));border-radius:0 6px 6px 0;font-size:18px;line-height:1.55;color:var(--paper);font-weight:600}
+.fala{margin:0 0 14px;padding:14px 18px;border-left:3px solid var(--gold);background:linear-gradient(90deg,rgba(192,143,84,.18),rgba(192,143,84,.04));border-radius:0 6px 6px 0;font-size:18px;line-height:1.55;color:var(--paper);font-weight:600}
 .dir{margin:0 0 14px 21px;font-style:italic;font-weight:400;opacity:.55;font-size:14.5px;line-height:1.5;color:var(--paper)}
 .fala .tg{display:block;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-hi);font-weight:700;margin-bottom:2px}
-.fala.r{margin-left:22px;font-weight:400;background:linear-gradient(90deg,rgba(169,127,78,.10),rgba(169,127,78,.02));border-left-color:rgba(169,127,78,.55)}
+.fala.r{margin-left:22px;font-weight:400;background:linear-gradient(90deg,rgba(192,143,84,.10),rgba(192,143,84,.02));border-left-color:rgba(192,143,84,.55)}
 .fala.q{margin-top:22px}
 .pauta{margin:-8px 0 18px;color:var(--muted);font-size:14.5px;max-width:70ch}
 .fontes{display:flex;flex-direction:column;gap:4px;margin:16px 0 0;font-size:13px}
 .fontes b{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-hi);margin-bottom:2px}
-.fontes a{color:var(--muted);text-decoration:underline;text-decoration-color:rgba(169,127,78,.5);text-underline-offset:3px;word-break:break-word}
+.fontes a{color:var(--muted);text-decoration:underline;text-decoration-color:rgba(192,143,84,.5);text-underline-offset:3px;word-break:break-word}
 .fontes a:hover{color:var(--gold-hi)}
 .lab{display:inline-block;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-hi);margin:0;font-weight:700}
 
@@ -174,13 +174,13 @@ background:linear-gradient(120deg,rgba(45,50,69,.7),rgba(20,24,39,.6));box-shado
 .decide{margin-top:34px}
 .decide .lab{margin:0 0 14px}
 .opts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.opt{position:relative;text-align:left;padding:22px 24px;border-radius:6px;border:1px solid var(--line);background:rgba(20,24,39,.55);cursor:pointer;display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:center;transition:transform .3s cubic-bezier(.2,.8,.2,1),border-color .3s,background .4s,color .3s;overflow:visible}
+.opt{position:relative;text-align:left;padding:22px 24px;border-radius:6px;border:1px solid var(--line);background:rgba(31,22,17,.55);cursor:pointer;display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:center;transition:transform .3s cubic-bezier(.2,.8,.2,1),border-color .3s,background .4s,color .3s;overflow:visible}
 .opt:hover{transform:translateY(-3px);border-color:var(--gold)}
 .opt .ico{width:48px;height:48px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold-hi);transition:all .35s}
 .opt strong{display:block;font-family:var(--f-display);font-weight:500;font-size:22px;line-height:1.15}
 .opt small{display:block;color:var(--muted);font-size:13px;margin-top:2px;transition:color .3s}
 .opt[aria-checked="true"].ok{background:linear-gradient(135deg,#C29A68,#A97F4E 60%,#8d6838);border-color:var(--gold-hi);color:var(--ink)}
-.opt[aria-checked="true"].ok small{color:rgba(20,24,39,.75)}
+.opt[aria-checked="true"].ok small{color:rgba(31,22,17,.75)}
 .opt[aria-checked="true"].ok .ico{background:var(--ink);border-color:var(--ink);color:var(--gold-hi)}
 .opt[aria-checked="true"].ch{border-color:var(--warn);background:rgba(227,166,107,.1)}
 .opt[aria-checked="true"].ch .ico{background:var(--warn);border-color:var(--warn);color:var(--ink)}
@@ -194,21 +194,21 @@ background:linear-gradient(120deg,rgba(45,50,69,.7),rgba(20,24,39,.6));box-shado
 .note-in{padding-top:18px}
 .note label{display:block;font-size:14px;margin-bottom:8px}
 .note label small{color:var(--muted);display:block;font-size:13px}
-textarea{width:100%;min-height:132px;resize:vertical;background:rgba(10,12,22,.6);color:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;font:inherit;line-height:1.55;transition:border-color .25s,box-shadow .25s}
+textarea{width:100%;min-height:132px;resize:vertical;background:rgba(20,13,9,.6);color:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;font:inherit;line-height:1.55;transition:border-color .25s,box-shadow .25s}
 textarea::placeholder{color:rgba(250,249,245,.38)}
-textarea:focus{outline:0;border-color:var(--gold-hi);box-shadow:0 0 0 3px rgba(169,127,78,.22)}
+textarea:focus{outline:0;border-color:var(--gold-hi);box-shadow:0 0 0 3px rgba(192,143,84,.22)}
 .nf{display:flex;justify-content:space-between;gap:12px;font-size:12px;color:var(--muted);margin-top:6px;font-variant-numeric:tabular-nums}
 .nf .err{color:var(--warn)}
 .status{margin:16px 0 0;font-size:13px;color:var(--muted);min-height:1.6em}
 
 /* envio */
-.send{border:1px solid var(--line);border-radius:6px;padding:clamp(22px,4vw,44px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:30px;align-items:center;background:linear-gradient(120deg,rgba(45,50,69,.7),rgba(20,24,39,.6));margin-bottom:60px}
+.send{border:1px solid var(--line);border-radius:6px;padding:clamp(22px,4vw,44px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:30px;align-items:center;background:linear-gradient(120deg,rgba(74,52,38,.7),rgba(31,22,17,.6));margin-bottom:60px}
 .send h2{font-family:var(--f-display);font-weight:500;font-size:clamp(26px,3.4vw,38px);margin:0 0 8px;line-height:1.1}
 .send p{margin:0;color:var(--muted);max-width:52ch}
 .sum{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:6px;font-size:14px}
 .sum li{display:flex;gap:10px;flex-wrap:wrap}
 .sum .s-ok{color:var(--ok)} .sum .s-ch{color:var(--warn)} .sum .s-no{color:var(--muted)}
-.go{display:inline-flex;align-items:center;gap:12px;padding:18px 30px;border-radius:999px;border:0;background:linear-gradient(135deg,#D8B988,#A97F4E);color:var(--ink);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:13px;text-decoration:none;cursor:pointer;position:relative;overflow:hidden;box-shadow:0 10px 40px -10px rgba(169,127,78,.7);transition:transform .3s}
+.go{display:inline-flex;align-items:center;gap:12px;padding:18px 30px;border-radius:999px;border:0;background:linear-gradient(135deg,#D8B988,#A97F4E);color:var(--ink);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:13px;text-decoration:none;cursor:pointer;position:relative;overflow:hidden;box-shadow:0 10px 40px -10px rgba(192,143,84,.7);transition:transform .3s}
 .go:hover{transform:translateY(-2px)}
 .go[aria-disabled="true"]{background:rgba(250,249,245,.08);color:var(--muted);box-shadow:none;cursor:not-allowed;transform:none}
 .go.sent,.go.sent[aria-disabled="true"]{background:var(--ok);color:var(--ink);box-shadow:none;cursor:default}
@@ -278,12 +278,12 @@ html{scroll-behavior:auto}
 </div>
 <div class="dial" aria-hidden="true">
 <svg viewBox="-200 -200 400 400" fill="none">
-<g class="r1" id="ticks" stroke="#A97F4E"></g>
-<g class="r2" stroke="#A97F4E" stroke-opacity=".5">
+<g class="r1" id="ticks" stroke="#C08F54"></g>
+<g class="r2" stroke="#C08F54" stroke-opacity=".5">
 <circle r="150" stroke-width="1" stroke-dasharray="2 9"/>
 <circle r="128" stroke-width=".7"/>
 </g>
-<circle r="96" stroke="#D8B988" stroke-opacity=".35" stroke-width=".8"/>
+<circle r="96" stroke="#EBCB96" stroke-opacity=".35" stroke-width=".8"/>
 </svg>
 <div class="mark gm" style="--img:var(--mark)"></div>
 </div>
@@ -349,7 +349,7 @@ blocos:[
 {"id": "paulo-golpes-black-friday", "title": "Golpes", "audio": "narracao-golpes-black-friday.m4a", "who": "Paulo", "publico": "Consumidores em geral, em época de compras, e o público do escritório, principalmente quem busca benefício ou ação e pode ser alvo de golpe com nome de advogado.", "porque": "A Black Friday gera atenção natural, e o tema do golpe do falso advogado é relevante para a confiança no escritório.", "intencao": "O que ganhamos: alcance amplo e compartilhável por dicas de consumo, e uma mensagem protetiva. O que queremos: reforçar o escritório como fonte confiável e orientar o público a verificar contatos.", "fontes": [["Black Friday 2026 e Procon (JB)", "https://www.jb.com.br/editorias/2026/10/05/black-friday-2026-procon.html"]], "blocos": [{"t": "d", "x": "texto na tela: BLACK FRIDAY · 27/11"}, {"t": "f", "x": "Só não pode ser uma black fraude, né?"}, {"t": "d", "x": "falando como se fosse making of, de forma descontraída"}, {"t": "f", "x": "Se já está pensando em comprar algo específico, vai consultando o preço desde já."}, {"t": "d", "x": "falando bem pertinho da camera, como se tivesse orientando um amigo"}, {"t": "f", "x": "Assim você compara o de antes com o da oferta e vê se teve desconto de verdade ou só foi maquiado."}, {"t": "d", "x": "mais afastado"}, {"t": "f", "x": "Desconfie de site que parece o original, com preço muito abaixo e só aceita Pix."}, {"t": "f", "x": "Compra online tem 7 dias para devolver a contar do recebimento, se você se arrepender."}, {"t": "f", "x": "E, já que falamos de fraude: cuidado com o golpe do falso advogado!"}, {"t": "f", "x": "Nós só entramos em contato com você pelos nossos números oficiais."}, {"t": "f", "x": "Nenhum benefício é liberado mediante pagamento de taxa. Mensagem que promete ganho fácil, desconfie."}, {"t": "d", "x": "Fecho, alternativa A (perfil)"}, {"t": "f", "x": "Recebeu uma mensagem em nome do escritório e ficou na dúvida? Confirme pelo número nosso oficial: 35 3198-0431."}]},
 {"id": "jackeline-idade-minima-67", "title": "Idade mínima de 67 anos para todos se aposentar", "audio": "narracao-idade-minima-67.m4a", "who": "Jackeline", "publico": "Pessoas físicas que contribuem ao INSS e estão próximas da aposentadoria, e quem se assustou com a notícia.", "porque": "A notícia está circulando, gera ansiedade e há risco de decisão precipitada. É tema central da especialidade do escritório.", "intencao": "O que ganhamos: atenção em tema de alto interesse e imagem de fonte confiável que desfaz boato. O que queremos: reforçar o escritório no previdenciário com conteúdo informativo e tranquilizador, sem chamada comercial.", "fontes": [["Poder360: grupo liderado por Arminio Fraga propõe nova reforma da Previdência", "https://www.poder360.com.br/poder-economia/grupo-liderado-por-arminio-fraga-propoe-nova-reforma-da-previdencia/"], ["Mix Vale: aposentadoria do INSS tem novas regras em 2026 e proposta de reforma", "https://www.mixvale.com.br/2026/10/18/aposentadoria-do-inss-tem-novas-regras-em-2026-e-proposta-de-reforma/"]], "blocos": [{"t": "d", "x": "texto na tela: IDADE MÍNIMA DE 67 ANOS PARA TODOS SE APOSENTAREM"}, {"t": "f", "x": "MITO OU VERDADE?"}, {"t": "d", "x": "contando em tom de fofoca, enquanto faz alguma coisa"}, {"t": "f", "x": "Mito. Por enquanto, é só proposta. A ideia de elevar de forma gradual a idade mínima até 67 anos, para homens e mulheres, vem de um estudo de economistas."}, {"t": "d", "x": "fala enquanto digita no computador e pega a garrafinha de água, como se fosse tomar + vira para o lado, transição"}, {"t": "d", "x": "vira para o lado, transição"}, {"t": "f", "x": "Não é lei, nem projeto aprovado."}, {"t": "f", "x": "Hoje vale as regras que já existem para se aposentar"}, {"t": "f", "x": "Então, não entre em pânico. Se um dia isso for aprovado, a própria lei vai definir quem seria afetado e como seria a transição."}, {"t": "f", "x": "E atenção: não mude seu planejamento por causa de uma notícia. Não pare de contribuir nem adie seu pedido de aposentadoria apenas por causa dessa proposta."}, {"t": "f", "x": "Se estiver perto de se aposentar, procure orientação especializada individual. A melhor regra depende da sua idade, do tempo de contribuição e do seu histórico de trabalho."}]},
 {"id": "13-salario-inss", "title": "13º salário", "audio": "narracao-13-salario.m4a", "pauta": "O INSS paga o 13º proporcional entre 24/11 e 7/12 a quem passou a receber benefício a partir de maio. CLT: a 1ª parcela vai até 30/11 e a 2ª até 18/12. BPC/LOAS não recebe 13º.", "publico": "Quem começou a receber aposentadoria, pensão ou auxílio a partir de maio, e familiares.", "porque": "Notícia oficial com data e interesse direto do público previdenciário.", "intencao": "O que ganhamos: alcance qualificado e compartilhamento. O que queremos: associar o escritório ao previdenciário com informação precisa, sem chamada comercial.", "fontes": [["INSS: beneficiários que começaram a receber após maio terão 13º salário pago em novembro", "https://www.gov.br/inss/pt-br/assuntos/noticias/beneficiarios-que-comecaram-a-receber-apos-maio-terao-13o-salario-pago-em-novembro"]], "blocos": [{"t": "d", "x": "Tela verde, site oficial do INSS"}, {"t": "f", "x": "Começou a receber benefício do INSS a partir de maio?"}, {"t": "f", "x": "Olha isso!"}, {"t": "f", "x": "O INSS vai pagar o 13º proporcional em novembro | para quem começou a receber o benefício depois da antecipação, | feita em abril e maio."}, {"t": "d", "x": "Apontando para o trecho do site | edição aproxima | vira para o lado, transição"}, {"t": "f", "x": "E o que significa proporcional?"}, {"t": "d", "x": "vira para o lado, transição"}, {"t": "f", "x": "O valor depende de quantos meses entram no cálculo."}, {"t": "d", "x": "camera próxima, para prender atenção"}, {"t": "f", "x": "Por exemplo: | se o benefício é de R$ 2 mil e são considerados seis meses, o 13º será de aproximadamente R$ 1 mil brutos."}, {"t": "d", "x": "abrindo a caneta | começa a escrever no quadro: 2 mil, 6 meses = 1 mil (faz um círculo em volta)"}, {"t": "f", "x": "Quem já recebeu o 13º antecipado não recebe essa mesma parcela novamente."}, {"t": "d", "x": "falando direto para a camera, com quadro ao fundo"}, {"t": "f", "x": "E atenção: quem recebe BPC/Loas não tem direito ao 13º."}, {"t": "d", "x": "falando direto para a camera, mais próximo"}, {"t": "f", "x": "O pagamento segue o calendário do INSS, entre 24 de novembro e 7 de dezembro, conforme o número final do benefício."}, {"t": "d", "x": "edição colocar calendário ou letras animadas com as datas, para fixar"}, {"t": "f", "x": "Para conferir, acesse o Meu INSS para consultar"}, {"t": "d", "x": "mostrar tela inicial do app no celular"}, {"t": "f", "x": "Salve este vídeo e envie para quem começou a receber benefício a partir de maio deste ano."}, {"t": "d", "x": "falando direto para a camera"}]},
-{"id": "algoritmo-trabalho-risco-processo", "title": "Algoritmo no trabalho e o risco de processo para a empresa", "audio": "narracao-algoritmo-no-trabalho.m4a", "blocos": [{"t": "f", "x": "A empresa pode ou não ler o WhatsApp do funcionário?"}, {"t": "f", "x": "Depende de qual aparelho e de qual conta. No celular ou computador que é da empresa, e com uma regra clara avisada antes, existe margem para monitorar."}, {"t": "f", "x": "No WhatsApp pessoal, o risco para a empresa é grande."}, {"t": "f", "x": "O erro que a gente mais vê é a empresa monitorar sem avisar nada, ou usar uma conversa pessoal como prova numa demissão. Isso pode virar um problema para ela, não para o funcionário."}, {"t": "f", "x": "Se a sua empresa ainda não tem uma política escrita sobre isso, vale revisar com um advogado antes de precisar dela."}, {"t": "f", "x": "Em caso de dúvidas, é recomendável buscar orientação jurídica especializada"}]},
+{"id": "algoritmo-trabalho-risco-processo", "title": "Monitoramento de funcionários", "audio": "narracao-algoritmo-no-trabalho.m4a", "blocos": [{"t": "f", "x": "A empresa pode ou não ler o WhatsApp do funcionário?"}, {"t": "f", "x": "Depende de qual aparelho e de qual conta. No celular ou computador que é da empresa, e com uma regra clara avisada antes, existe margem para monitorar."}, {"t": "f", "x": "No WhatsApp pessoal, o risco para a empresa é grande."}, {"t": "f", "x": "O erro que a gente mais vê é a empresa monitorar sem avisar nada, ou usar uma conversa pessoal como prova numa demissão. Isso pode virar um problema para ela, não para o funcionário."}, {"t": "f", "x": "Se a sua empresa ainda não tem uma política escrita sobre isso, vale revisar com um advogado antes de precisar dela."}, {"t": "f", "x": "Em caso de dúvidas, é recomendável buscar orientação jurídica especializada"}]},
 {"id": "pergunta-resposta-01", "title": "Pergunta x Resposta #01", "audio": "narracao-pergunta-resposta-01.m4a", "publico": "Pessoas físicas com dúvidas previdenciárias (três perguntas), consumidor (uma) e quem teve desconto indevido no benefício.", "porque": "Para iniciar um quadro recorrente de dúvidas rápidas, que dá consistência editorial ao perfil e mostra o escritório como fonte de respostas.", "intencao": "O que ganhamos: formato replicável, comentários e ideias de pauta vindas do público. O que queremos: reforçar o previdenciário com respostas curtas e confiáveis e criar hábito de acompanhamento. Ressalva: em vídeo curto, a resposta precisa ser rápida, mas não pode ficar incompleta a ponto de errar.", "blocos": [{"t": "q", "x": "1. Aposentado pode continuar trabalhando de carteira assinada?"}, {"t": "r", "x": "Pode, e continua recebendo a aposentadoria. Mas na aposentadoria por incapacidade permanente, voltar a trabalhar cancela o benefício, e na especial existe restrição para voltar a atividade nociva."}, {"t": "q", "x": "2. Trabalhador rural sem carteira assinada consegue se aposentar?"}, {"t": "r", "x": "Consegue. Mas precisa de documentos que comprovem o trabalho no campo. Testemunha complementa, não substitui."}, {"t": "q", "x": "3. O INSS negou o benefício. Dá para recorrer?"}, {"t": "r", "x": "Dá, e o prazo do recurso é de 30 dias. Também dá para fazer um novo pedido com documentos melhores, mas pode mudar a data de início do benefício."}, {"t": "q", "x": "4. Comprei pela internet e me arrependi. Posso desistir?"}, {"t": "r", "x": "Pode, em até 7 dias depois de receber, sem precisar explicar o motivo."}, {"t": "q", "x": "5. Apareceu no meu benefício um desconto de empréstimo que eu não fiz. Dá para contestar?"}, {"t": "r", "x": "Dá, e quanto antes, melhor. Guarde o extrato e procure orientação especializada"}, {"t": "f", "x": "Qual dúvida você quer ver no próximo vídeo? Só não mande dados do seu caso, tá?"}]},
 {"id": "pergunta-resposta-02", "title": "Pergunta x Resposta #02", "audio": "narracao-pergunta-resposta-02.m4a", "blocos": [{"t": "q", "x": "1. Quem recebe BPC tem direito ao 13º?"}, {"t": "r", "x": "Não. O BPC é um benefício assistencial, e o 13º é só para benefícios previdenciários."}, {"t": "q", "x": "2. Dá para se aposentar sem nunca ter tido carteira assinada?"}, {"t": "r", "x": "Dá, desde que tenha contribuído ao INSS por conta própria ou como MEI, e cumpra os requisitos."}, {"t": "q", "x": "3. A companheira tem direito à pensão por morte?"}, {"t": "r", "x": "Tem, desde que prove a união estável com documentos."}, {"t": "q", "x": "4. Dá para vender as férias?"}, {"t": "r", "x": "Dá, até um terço, ou seja, 10 dias. Quem decide é o empregado, a empresa não pode obrigar."}, {"t": "q", "x": "5. Dá para se divorciar no cartório?"}, {"t": "d", "x": "a mais útil, deixada para o fim"}, {"t": "r", "x": "Dá, se for de comum acordo e não houver filho menor ou incapaz."}, {"t": "f", "x": "Qual dúvida você quer ver no próximo vídeo? Só não mande dados do seu caso, tá?"}]},
 {"id": "pergunta-resposta-03", "title": "Pergunta x Resposta #03", "audio": "narracao-pergunta-resposta-03.m4a", "blocos": [{"t": "q", "x": "1. A primeira parcela do 13º vence quando?"}, {"t": "r", "x": "Até 30 de novembro. A segunda parcela vence até 20 de dezembro."}, {"t": "d", "x": "para quem é CLT"}, {"t": "q", "x": "2. Comprei na Black Friday e me arrependi. Posso desistir?"}, {"t": "r", "x": "Pode, se a compra foi pela internet ou por telefone. O prazo é de 7 dias depois de receber. Se foi na loja física, a troca por arrependimento depende da política da loja."}, {"t": "q", "x": "3. MEI tem direito a auxílio por doença?"}, {"t": "r", "x": "Tem, desde que tenha 12 meses de contribuição em dia."}, {"t": "q", "x": "4. A pensão alimentícia acaba sozinha quando o filho faz 18 anos?"}, {"t": "r", "x": "Não. Para parar de pagar, é preciso pedir a exoneração e ter decisão da Justiça. Tem que verificar o que se aplica ao seu caso"}, {"t": "q", "x": "5. Contrato de gaveta garante que o imóvel é meu?"}, {"t": "r", "x": "Não. O imóvel só passa a ser seu com o registro no cartório."}, {"t": "f", "x": "Qual dúvida você quer ver no próximo vídeo? Só não mande dados do seu caso, tá?"}]},
@@ -539,7 +539,7 @@ function draw(){
 ctx.clearRect(0,0,W,H);
 for(var i=0;i<S.length;i++){var s=S[i];
 var dx=(s.x/W-mx),prox=Math.max(0,1-Math.abs(dx)*3),al=s.a*(.55+prox*.9);
-var g=ctx.createLinearGradient(0,s.y,0,s.y-s.l);g.addColorStop(0,"rgba(216,185,136,0)");g.addColorStop(.7,"rgba(216,185,136,"+al+")");g.addColorStop(1,"rgba(255,244,224,"+Math.min(.9,al*2)+")");
+var g=ctx.createLinearGradient(0,s.y,0,s.y-s.l);g.addColorStop(0,"rgba(235,203,150,0)");g.addColorStop(.7,"rgba(235,203,150,"+al+")");g.addColorStop(1,"rgba(255,244,224,"+Math.min(.9,al*2)+")");
 ctx.strokeStyle=g;ctx.lineWidth=s.w;ctx.beginPath();ctx.moveTo(s.x,s.y);ctx.lineTo(s.x,s.y-s.l);ctx.stroke();
 if(!reduce){s.y-=s.v;if(s.y-s.l<-20){S[i]=mk(false)}}}
 }
